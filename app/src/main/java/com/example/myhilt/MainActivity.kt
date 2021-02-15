@@ -15,8 +15,8 @@ class MainActivity: AppCompatActivity() {
     lateinit var constructorInjectClass: ConstructorInjectClass
 
     // This is wrong and cause crash
-    @Inject
-    lateinit var testFragment: TestFragment
+//    @Inject
+//    lateinit var testFragment: TestFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
