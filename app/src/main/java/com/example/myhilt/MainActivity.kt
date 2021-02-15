@@ -11,13 +11,13 @@ class MainActivity: AppCompatActivity() {
     private val TAG = "MainActivity"
 
     @Inject
-    lateinit var injectableClass: InjectableClass
+    lateinit var constructorInjectClass: ConstructorInjectClass
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val task = injectableClass.doTask()
+        val task = constructorInjectClass.doTask()
 
         Log.e(TAG, "onCreate: $task")
 
