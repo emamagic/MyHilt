@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -17,10 +18,14 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val task = constructorInjectClass.doTask()
+        Log.e(TAG, "onCreate: ${constructorInjectClass.doTask()}")
 
-        Log.e(TAG, "onCreate: $task")
+
+        btn_go.setOnClickListener { recreate() }
+
 
     }
+
+
 
 }
