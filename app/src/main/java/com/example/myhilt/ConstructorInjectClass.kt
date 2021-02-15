@@ -1,15 +1,19 @@
 package com.example.myhilt
 
-import android.util.Log
+import com.google.gson.Gson
 import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
 class ConstructorInjectClass @Inject constructor(
-    private val task: InjectableClass
+    private val myInterface: TestInterface,
+    private val gson: Gson
 ) {
-    init {
-        Log.e("onCreate", "Object Created")
+
+    fun doInterface(){
+        myInterface.doTask()
     }
-    fun doTask() = task.doTask()
+
+    fun doGson(){
+        gson.excluder()
+    }
+
 }

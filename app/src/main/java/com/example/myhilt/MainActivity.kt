@@ -14,22 +14,12 @@ class MainActivity: AppCompatActivity() {
     @Inject
     lateinit var constructorInjectClass: ConstructorInjectClass
 
-    // This is wrong and cause crash
-//    @Inject
-//    lateinit var testFragment: TestFragment
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.e(TAG, "onCreate: ${constructorInjectClass.doTask()}")
-
-
-        btn_go.setOnClickListener { recreate() }
 
 
     }
-
-
 
 }
