@@ -14,6 +14,9 @@ import javax.inject.Singleton
 object MyModule {
 
 
+    @ActivityScoped
+    @Provides
+    fun provideString() = " Provide String "
 
     @ActivityScoped
     @Provides

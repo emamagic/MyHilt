@@ -14,11 +14,14 @@ class MainActivity: AppCompatActivity() {
     @Inject
     lateinit var constructorInjectClass: ConstructorInjectClass
 
+    @Inject
+    lateinit var string: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        Log.e(TAG, "onCreate: $string")
 
     }
 
