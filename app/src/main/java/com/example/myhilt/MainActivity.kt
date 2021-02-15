@@ -11,8 +11,7 @@ import javax.inject.Inject
 class MainActivity: AppCompatActivity() {
     private val TAG = "MainActivity"
 
-    @Inject
-    lateinit var constructorInjectClass: ConstructorInjectClass
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
