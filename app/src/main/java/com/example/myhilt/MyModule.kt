@@ -11,23 +11,9 @@ import javax.inject.Qualifier
 @InstallIn(ActivityComponent::class)
 object MyModule {
 
-    @String1
     @ActivityScoped
     @Provides
     fun provideString1() = " This is String 1 "
 
-    @String2
-    @ActivityScoped
-    @Provides
-    fun provideString2() = " This is String 2 "
-
 
 }
-
-@Qualifier
-@Retention(AnnotationRetention.BINARY)
-annotation class String1
-
-@Qualifier
-@Retention(AnnotationRetention.BINARY)
-annotation class String2
