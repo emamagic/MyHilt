@@ -5,11 +5,19 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.scopes.ActivityScoped
+import dagger.multibindings.IntoSet
+import dagger.multibindings.Multibinds
+import okhttp3.Interceptor
+import okhttp3.logging.HttpLoggingInterceptor
 import javax.inject.Qualifier
 
 @Module
 @InstallIn(ActivityComponent::class)
 object MyModule {
+
+    @Provides
+    @IntoSet
+    fun provideInterceptor() = HttpLoggingInterceptor()
 
     @String1
     @ActivityScoped
