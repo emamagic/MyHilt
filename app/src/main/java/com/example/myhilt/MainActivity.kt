@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity: AppCompatActivity() {
-    private val TAG = "MainActivity"
 
     @Inject
     lateinit var injectableClass: InjectableClass
@@ -19,7 +19,7 @@ class MainActivity: AppCompatActivity() {
 
         val task = injectableClass.doTask()
 
-        Log.e(TAG, "onCreate: $task")
+        Timber.e("hilt -> $task")
 
     }
 
