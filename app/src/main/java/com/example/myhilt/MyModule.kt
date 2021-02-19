@@ -20,7 +20,7 @@ object MyModule {
 
     @ActivityScoped
     @Provides
-    fun provideTestInterface(gson: Gson ,@ApplicationContext context: Context): TestInterface {
+    fun provideTestInterface(gson: Gson): TestInterface {
         return ConstructorInjectClass(gson)
     }
 
