@@ -1,5 +1,6 @@
 package com.example.myhilt
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -13,10 +14,18 @@ class TestFragment @Inject constructor(
     private val test: String
 ) : Fragment(R.layout.fragment_test) {
 
-    private val TAG = "TestFragment"
+    override fun onAttach(context: Context) {
+        Log.e("TAG", "onAttach: Fragment")
+        super.onAttach(context)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        Log.e("TAG", "onCreate: Fragment")
+        super.onCreate(savedInstanceState)
+    }
     
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.e(TAG, "onViewCreated: ${test}", )
+        Log.e("TAG", "onViewCreated: ${test}", )
     }
 }
