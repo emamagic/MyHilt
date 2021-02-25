@@ -13,4 +13,5 @@ class TestFragment @Inject constructor(): Fragment(R.layout.fragment_test) {
         super.onViewCreated(view, savedInstanceState)
 
     }
+
 }

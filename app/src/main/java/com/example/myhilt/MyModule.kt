@@ -1,9 +1,11 @@
 package com.example.myhilt
 
+import android.content.Context
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.android.scopes.ActivityScoped
 import dagger.multibindings.IntoSet
 import dagger.multibindings.Multibinds
@@ -27,7 +29,7 @@ object MyModule {
     @String2
     @ActivityScoped
     @Provides
-    fun provideString2() = " This is String 2 "
+    fun provideString2(@ApplicationContext context: Context) = "${context.getString(R.string.app_name)}"
 
 
 }
