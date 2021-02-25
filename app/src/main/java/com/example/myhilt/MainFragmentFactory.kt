@@ -10,8 +10,8 @@ class MainFragmentFactory @Inject constructor(
 
     override fun instantiate(classLoader: ClassLoader, className: String): Fragment {
         return when(className){
-            TestFragment::class.java.name -> {
-                TestFragment(test)
+            MainFragment::class.java.name -> {
+                MainFragment(test)
             }
             else -> super.instantiate(classLoader, className)
         }

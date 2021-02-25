@@ -5,7 +5,10 @@
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:name="com.example.myhilt.MainNavHostFragment"
+    app:defaultNavHost="true"
+    app:navGraph="@navigation/nav_graph">
 
 
 </androidx.fragment.app.FragmentContainerView>

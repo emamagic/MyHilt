@@ -9,7 +9,7 @@ import dagger.hilt.android.scopes.FragmentScoped
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class TestFragment @Inject constructor(
+class MainFragment @Inject constructor(
     private val test: String
 ) : Fragment(R.layout.fragment_test) {
 

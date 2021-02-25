@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'kotlin-android-extensions'
+    id "androidx.navigation.safeargs.kotlin"
 }
 
 android {
@@ -55,4 +56,7 @@ dependencies {
     // Gson
     implementation 'com.google.code.gson:gson:2.8.6'
 
+    // Navigation Component
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
 }
