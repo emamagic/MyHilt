@@ -13,7 +13,7 @@ object MyModule {
 
     @ActivityScoped
     @Provides
-    fun provideString1() = " This is String 1 "
+    fun provideString1() = " constructor inject fragment "
 
 
 }
