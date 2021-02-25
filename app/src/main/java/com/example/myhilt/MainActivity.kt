@@ -3,7 +3,10 @@ package com.example.myhilt
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import dagger.hilt.EntryPoint
+import dagger.hilt.InstallIn
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.EntryPointAccessors
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -21,5 +24,9 @@ class MainActivity: AppCompatActivity() {
             .commit()
 
     }
+
+
+//        val entryPoint = EntryPointAccessors.fromActivity(this ,MyFragmentFactoryEntryPoint::class.java)
+//        supportFragmentManager.fragmentFactory = entryPoint.getFragmentFactory()
 
 }
